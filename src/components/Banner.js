@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer", "Freelancer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Suhail`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" , Agentic Ai Seeker]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi! I'm Suhail and iam `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" , Agentic Ai Seeker]'><span className="wrap">{text}</span></span></h1>
                   <p>I'm Suhail Khan, a web developer skilled in building dynamic and interactive user interfaces using Next.js, TypeScript, and Tailwind CSS.
                   I'm currently enrolled in the Certified Cloud Applied Generative AI Engineer (GenEng) program and expanding my skills in Python and Agentic AI. I'm passionate about creating engaging and user-friendly web applications that deliver exceptional user experiences.</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>

@@ -93,3 +93,80 @@ export const Contact = () => {
     </section>
   )
 }
+
+
+
+// import React, { useRef, useState, useEffect } from "react";
+// import { Alert, Col, Container, Row } from "react-bootstrap";
+// // …
+// import emailjs from '@emailjs/browser';
+
+
+// export const Contact = () => {
+//   const formRef = useRef();
+//   const [buttonText, setButtonText] = useState("Send");
+//   const [status, setStatus] = useState({});
+
+//   const clearForm = () => formRef.current.reset(); // simple DOM reset :contentReference[oaicite:14]{index=14}
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     setButtonText("Sending...");
+//     emailjs
+//       .sendForm(
+//         "service_7tc6zrq",    // e.g., service_xxx
+//         "template_m9czfwj",   // e.g., template_yyy
+//         formRef.current,      // the form DOM node
+//         "arDOHSxyygqPj7D4K"     // EmailJS public key
+//       )
+//       .then(
+//         (response) => {
+//           console.log("SUCCESS!", response.status, response.text);
+//           setStatus({ success: true, message: "Message sent successfully!" });
+//           clearForm();
+//           setButtonText("Send");
+//         },
+//         (error) => {
+//           console.log("FAILED...", error);
+//           setStatus({ success: false, message: "Failed to send, please try again." });
+//           setButtonText("Send");
+//         },
+//       );
+//   };
+  
+// return (
+//     <section className="contact" id="connect">
+//       <Container>
+//         <Row className="align-items-center">
+//           {/* … image column … */}
+//           <Col size={12} md={6}>
+//             <form ref={formRef} onSubmit={handleSubmit}>
+//               <Row>
+//                 {/* Give each input a `name` matching your template variables */}
+//                 <Col sm={6}>
+//                   <input type="text" name="from_name" placeholder="Your Name" required />
+//                 </Col>
+//                 <Col sm={6}>
+//                   <input type="email" name="from_email" placeholder="Your Email" required />
+//                 </Col>
+//                 <Col sm={12}>
+//                   <textarea name="message" rows="6" placeholder="Message" required />
+//                 </Col>
+//                 <Col sm={12}>
+//                   <button type="submit">{buttonText}</button>
+//                 </Col>
+//                 {status.message && (
+//                   <Col sm={12}>
+//                     <Alert variant={status.success ? "success" : "danger"}>
+//                       {status.message}
+//                     </Alert>
+//                   </Col>
+//                 )}
+//               </Row>
+//             </form>
+//           </Col>
+//         </Row>
+//       </Container>
+//     </section>
+//   );
+// };
